@@ -106,94 +106,94 @@ class WZMLStyle:
 ------------------------------------------\n\n"""
     
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
-    PM_START =            " <b><u>Task Started :</u></b>\n┃\n <b>Link:</b> <a href='{msg_link}'>Click Here</a>"
-    L_LOG_START =           " <b><u>Leech Started :</u></b>\n┃\n <b>User :</b> {mention} ( #ID{uid} )\n <b>Source :</b> <a href='{msg_link}'>Click Here</a>"
+    PM_START =            "📌 <b><u>ᴛᴀsᴋ sᴛᴀʀᴛᴛᴇᴅ :</u></b>\n\n <b>🔗 ʟɪɴᴋ :</b> <a href='{msg_link}'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"
+    L_LOG_START =           "📌 <b><u>ʟᴇᴇᴄʜ sᴛᴀʀᴛᴛᴇᴅ :</u></b>\n\n<b>🧑‍🎓 ᴜsᴇʀ :</b> {mention} ( #ɪᴅ{uid} )\n<b>🧬 sᴏᴜʀᴄᴇ :</b> <a href='{msg_link}'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
-    NAME =                  '<b><i>{Name}</i></b>\n\n'
-    SIZE =                  ' <b>Size: </b>{Size}\n'
-    ELAPSE =                ' <b>Elapsed: </b>{Time}\n'
-    MODE =                  ' <b>Mode: </b>{Mode}\n'
+    NAME =                  '<b>📂 ɴᴀᴍᴇ : <code>{Name}</code></b>\n\n'
+    SIZE =                  '<b>📦 sɪᴢᴇ : </b><code>{Size}</code>\n'
+    ELAPSE =                '<b>🗒️ ᴇʟᴀᴘsᴇᴅ : </b><code>{Time}</code>\n'
+    MODE =                  '<b>🕹️ ᴍᴏᴅᴇ : </b><code>{Mode}</code>\n'
 
     # ----- LEECH -------
-    L_TOTAL_FILES =         ' <b>Total Files: </b>{Files}\n'
-    L_CORRUPTED_FILES =     ' <b>Corrupted Files: </b>{Corrupt}\n'
-    L_CC =                  ' <b>By: </b>{Tag}\n\n'
-    PM_BOT_MSG =            ' <b><i>File(s) have been Sent above</i></b>'
-    L_BOT_MSG =             ' <b><i>File(s) have been Sent to Bot PM (Private)</i></b>'
-    L_LL_MSG =              ' <b><i>File(s) have been Sent. Access via Links...</i></b>'
+    L_TOTAL_FILES =         '<b>🗃️ ᴛᴏᴛᴀʟ ғɪʟᴇs : </b><code>{Files}</code>\n'
+    L_CORRUPTED_FILES =     '<b>📑 ᴄᴏʀʀᴜᴘᴛᴇᴅ ғɪʟᴇs : </b><code>{Corrupt}</code>\n'
+    L_CC =                  '<b>🎭 ᴜᴘʟᴏᴅᴇ ʙʏ: </b>{Tag}</code>\n\n'
+    PM_BOT_MSG =            '<b>🔰 ғɪʟᴇ ʜᴀᴠᴇ ʙᴇᴇɴ sᴇɴᴛ ᴀʙᴏᴠᴇ\n\n~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href="https://t.me/Hari_OP">ʜᴀʀɪ ᠰ ᴛɢ​</a></b>'
+    L_BOT_MSG =             '<b>🔰 ғɪʟᴇ (ꜱ) ʜᴀᴠᴇ ʙᴇᴇɴ sᴇɴᴛ ᴛᴏ ʙᴏᴛ ᴘᴍ ᴘʀɪᴠᴀᴛᴇ\n\n~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href="https://t.me/Hari_OP">ʜᴀʀɪ ᠰ ᴛɢ​</a></b>'
+    L_LL_MSG =              '<b>🔰 ғɪʟᴇ (ꜱ) ʜᴀᴠᴇ ʙᴇᴇɴ sᴇɴᴛ. ᴀᴄᴄᴇꜱꜱ ᴠɪᴀ ʟɪɴᴋꜱ...\n\n~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href="https://t.me/Hari_OP">ʜᴀʀɪ ᠰ ᴛɢ</a></b>'
     
     # ----- MIRROR -------
-    M_TYPE =                ' <b>Type: </b>{Mimetype}\n'
-    M_SUBFOLD =             ' <b>SubFolders: </b>{Folder}\n'
-    TOTAL_FILES =           ' <b>Files: </b>{Files}\n'
-    RCPATH =                ' <b>Path: </b><code>{RCpath}</code>\n'
-    M_CC =                  ' <b>By: </b>{Tag}\n\n'
-    M_BOT_MSG =             ' <b><i>Link(s) have been Sent to Bot PM (Private)</i></b>'
+    M_TYPE =                '<b>🗒️ ᴛʏᴘᴇ : </b><code>{Mimetype}</code>\n'
+    M_SUBFOLD =             '<b>🗃️ sᴜʙғᴏʟᴅᴇʀs : </b><code>{Folder}</code>\n'
+    TOTAL_FILES =           '<b>🗂️ ғɪʟᴇs : </b><code>{Files}</code>\n'
+    RCPATH =                '<b>🗞️ ᴘᴀᴛʜ : </b><code>{RCpath}</code>\n'
+    M_CC =                  '<b>🎭 ᴜᴘʟᴏᴅᴇ : </b>{Tag}\n\n'
+    M_BOT_MSG =             '<b>🔰 ʟɪɴᴋ (ꜱ) ʜᴀᴠᴇ ʙᴇᴇɴ sᴇɴᴛ ᴛᴏ ʙᴏᴛ ᴘᴍ ᴘʀɪᴠᴀᴛᴇ</b>'
     
     # ----- BUTTONS -------
-    CLOUD_LINK =      '☁️ Cloud Link'
-    SAVE_MSG =        '📨 Save Message'
-    RCLONE_LINK =     '♻️ RClone Link'
-    DDL_LINK =        '📎 {Serv} Link'
-    SOURCE_URL =      '🔐 Source Link'
-    INDEX_LINK_F =    '🗂 Index Link'
-    INDEX_LINK_D =    '⚡ Index Link'
-    VIEW_LINK =       '🌐 View Link'
-    CHECK_PM =        ' View in PM'
-    CHECK_LL =        '🖇 View in Links Log'
-    MEDIAINFO_LINK =  '📃 MediaInfo'
+    CLOUD_LINK =      '☁️ ᴄʟᴏᴜᴅ ʟɪɴᴋ'
+    SAVE_MSG =        '📨 sᴀᴠᴇ ᴍᴇᴇssᴀɢᴇ'
+    RCLONE_LINK =     '♻️ ʀᴄʟᴏɴᴇ ʟɪɴᴋ'
+    DDL_LINK =        '📎 {Serv} ʟɪɴᴋ'
+    SOURCE_URL =      '🔐 sᴏᴜʀᴄᴇ ʟɪɴᴋ'
+    INDEX_LINK_F =    '🗂 ɪɴᴅᴇx ʟɪɴᴋ'
+    INDEX_LINK_D =    '⚡ ɪɴᴅᴇx ʟɪɴᴋ'
+    VIEW_LINK =       '🌐 ᴠɪᴇᴡ ʟɪɴᴋ'
+    CHECK_PM =        '🗳️ ᴠɪᴇᴡ ɪɴ ʙᴏᴛ ᴘᴍ'
+    CHECK_LL =        '🖇 ᴠɪᴇᴡ ɪɴ ʟɪɴᴋ ʟᴏɢ'
+    MEDIAINFO_LINK =  '📃 ᴍᴇᴅɪᴀ ɪɴғᴏ'
     # ---------------------
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '<b><i>{Name}</i></b>'
+    STATUS_NAME =       '<b>✓ ғɪʟᴇ ɴᴀᴍᴇ</b> : <code>{Name}</code>\n'
 
     #####---------PROGRESSIVE STATUS-------
-    BAR =               '\n {Bar}'
-    PROCESSED =         '\n <b>Processed:</b> {Processed}'
-    STATUS =            '\n <b>Status:</b> <a href="{Url}">{Status}</a>'
-    ETA =                                                '  <b>ETA:</b> {Eta}'
-    SPEED =             '\n <b>Speed:</b> {Speed}'
-    ELAPSED =                                     '  <b>Elapsed:</b> {Elapsed}'
-    ENGINE =            '\n <b>Engine:</b> {Engine}'
-    STA_MODE =          '\n <b>Mode:</b> {Mode}'
-    SEEDERS =           '\n <b>Seeders:</b> {Seeders}  '
-    LEECHERS =                                           '<b>Leechers:</b> {Leechers}'
-
+    BAR =               '\n<b>» <a href="https://t.me/Hari_OP">{Bar}</a></b>'
+    PROCESSED =         '\n<b>» ᴘʀᴏᴄᴇssᴇᴅ :</b> <code>{Processed}</code>'
+    STATUS =            '\n<b>» sᴛᴀᴛᴜs :</b> <b><a href="{Url}">{Status}</a></b>'
+    ETA =                                                ' | <b>ᴇᴛᴀ :</b> <code>{Eta}</code>'
+    SPEED =             '\n<b>» sᴘᴇᴇᴅ :</b> <code>{Speed}</code>'
+    ELAPSED =                                     ' | <b>ᴇʟᴀᴘsᴇᴅ :</b> <code>{Elapsed}</code>'
+    ENGINE =            '\n<b>» ᴇɴɢɪɴᴇ :</b> <code>{Engine}</code>'
+    STA_MODE =          '\n<b>» ᴍᴏᴅᴇ :</b> <code>{Mode}</code>'
+    SEEDERS =           '\n<b>» sᴇᴇᴅᴇʀs :</b> <code>{Seeders}</code> | '
+    LEECHERS =                                           '<b>ʟᴇᴇᴄʜᴇʀs :</b> <code>{Leechers}</code>'
+    
     ####--------SEEDING----------
-    SEED_SIZE =      '\n <b>Size: </b>{Size}'
-    SEED_SPEED =     '\n <b>Speed: </b> {Speed}  '
-    UPLOADED =                                     '<b>Uploaded: </b> {Upload}'
-    RATIO =          '\n <b>Ratio: </b> {Ratio}  '
-    TIME =                                         '<b>Time: </b> {Time}'
-    SEED_ENGINE =    '\n <b>Engine:</b> {Engine}'
+    SEED_SIZE =      '\n<b>» sɪᴢᴇ : </b><code> {Size}</code>'
+    SEED_SPEED =     '\n<b>» sᴘᴇᴇᴅ : </b> <code>{Speed}</code> | '
+    UPLOADED =                                     '<b>ᴜᴘʟᴏᴀᴅᴇᴅ :</b> <code>{Upload}</code>'
+    RATIO =          '\n<b>» ʀᴀᴛɪᴏ : </b> <code>{Ratio}</code> | '
+    TIME =                                         '<b>ᴛɪᴍᴇ : </b> <code>{Time}</code>'
+    SEED_ENGINE =    '\n<b>» ᴇɴɢɪɴᴇ :</b> <code>{Engine}</code>'
 
     ####--------NON-PROGRESSIVE + NON SEEDING----------
-    STATUS_SIZE =    '\n <b>Size: </b>{Size}'
-    NON_ENGINE =     '\n <b>Engine:</b> {Engine}'
+    STATUS_SIZE =    '\n<b>» sɪᴢᴇ : </b><code> {Size}</code>'
+    NON_ENGINE =     '\n<b>» ᴇɴɢɪɴᴇ :</b> <code>{Engine}</code>'
 
     ####--------OVERALL MSG FOOTER----------
-    USER =              '\n <b>User:</b> <code>{User}</code>  '
-    ID =                                                        '<b>ID:</b> <code>{Id}</code>'
-    BTSEL =          '\n <b>Select:</b> {Btsel}'
-    CANCEL =         '\n {Cancel}\n\n'
-
+    USER =              '\n<b>» ᴜsᴇʀ :</b> <code>{User}</code> | '
+    ID =                                                        '<b>ɪᴅ :</b> <code>{Id}</code>'
+    BTSEL =          '\n<b>» sᴇʟᴇᴄᴛ :</b> <code>{Btsel}</code>'
+    CANCEL =         '\n<b>» ᴄᴀɴᴄᴇʟ :</b> <code>{Cancel}</code>\n\n'
+    
     ####------FOOTER--------
-    FOOTER = ' <b><i>Bot Stats</i></b>\n'
-    TASKS =  ' <b>Tasks:</b> {Tasks}\n'
-    BOT_TASKS = ' <b>Tasks:</b> {Tasks}/{Ttask}  <b>AVL:</b> {Free}\n'
-    Cpu = ' <b>CPU:</b> {cpu}%  '
-    FREE =                      '<b>F:</b> {free} [{free_p}%]'
-    Ram = '\n <b>RAM:</b> {ram}%  '
-    uptime =                     '<b>UPTIME:</b> {uptime}'
-    DL = '\n╰ <b>DL:</b> {DL}/s  '
-    UL =                        '<b>UL:</b> {UL}/s'
+    FOOTER = '<u><b>ʙᴏᴛ sᴛᴀᴛs</b></u>\n\n'
+    TASKS =  '<b>» ᴛᴀsᴋs :</b> <code>{Tasks}</code>\n'
+    BOT_TASKS = '<b>» ᴛᴀsᴋs :</b> <code>{Tasks}/{Ttask}</code> | <b>ᴀᴠʟ :</b> <code>{Free}</code>\n'
+    Cpu = '<b>» ᴄᴘᴜ :</b> <code>{cpu}%</code> | '
+    FREE =                      '<b>ғʀᴇᴇ :</b> <code>{free} [{free_p}%]</code>'
+    Ram = '\n<b>» ʀᴀᴍ :</b> <code>{ram}%</code> | '
+    uptime =                     '<b>ᴜᴘᴛɪᴍᴇ :</b> <code>{uptime}</code>'
+    DL = '\n<b>» ᴅʟ :</b> <code>{DL}/s</code> | '
+    UL =                        '<b>ᴜʟ :</b> <code>{UL}/s</code>'
 
     ###--------BUTTONS-------
-    PREVIOUS = '⫷'
+    PREVIOUS = '⇇ ʙᴀᴄᴋ'
     REFRESH = 'ᴘᴀɢᴇs\n{Page}'
-    NEXT = '⫸'
+    NEXT = 'ɴᴇxᴛ ⇉'
     # ---------------------
 
     #STOP_DUPLICATE_MSG: ---> clone.py, aria2_listener.py, task_manager.py
@@ -217,52 +217,61 @@ class WZMLStyle:
     # ---------------------
 
     # async def mirror_status(_, message): ----> status.py
-    NO_ACTIVE_DL = '''<i>No Active Downloads!</i>
+    NO_ACTIVE_DL = '''<b>ɴᴏ ᴀᴄᴛɪᴠᴇ ᴅᴏᴡɴʟᴏᴀᴅs !</b>
     
- <b><i>Bot Stats</i></b>
- <b>CPU:</b> {cpu}%  <b>F:</b> {free} [{free_p}%]
- <b>RAM:</b> {ram}  <b>UPTIME:</b> {uptime}
+🧵 <b>ʙᴏᴛ sᴛᴀᴛs</b> 🧵
+
+<b>ᴄᴘᴜ :</b> <code>{cpu}%</code> | <b>ғʀᴇʀ :</b> <code>{free} [{free_p}%]</code>
+<b>ʀᴀᴍ :</b> <code>{ram}</code> | <b>ᴜᴘᴛɪᴍᴇ :</b> <code>{uptime}</code>
     '''
     # ---------------------
 
     # USER Setting --> user_setting.py 
-    USER_SETTING = ''' <b><u>User Settings :</u></b>
+    USER_SETTING = '''🎭 <b>ᴜsᴇʀ sᴇᴛᴛɪɴɢs :</b>
         
-<b> Name :</b> {NAME} ( <code>{ID}</code> )
-<b> Username :</b> {USERNAME}
-<b> Telegram DC :</b> {DC}
-<b> Language :</b> {LANG}'''
+<b>~ ɴᴀᴍᴇ :</b> {NAME} ( <code>{ID}</code> )
+<b>~ ᴜsᴇʀ ɴᴀᴍᴇ :</b> {USERNAME}
+<b>~ ᴛᴇʟᴇɢʀᴀɴ ᴅᴄ :</b> {DC}
+<b>~ ʟᴀɴɢᴜᴀɢᴇ :</b> {LANG}
 
-    UNIVERSAL = ''' <b><u>Universal Settings : {NAME}</u></b>
+<b>~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href='https://t.me/Hari_OP'>ʜᴀʀɪ ᠰ ᴛɢ​</a></b>'''
+    
+    UNIVERSAL = '''🍂 <b><u>ᴜɴɪᴠᴇʀsᴀʟ sᴇᴛᴛɪɴɢs : {NAME}</u></b>
 
-<b> YT-DLP Options :</b> <b><code>{YT}</code></b>
-<b> Daily Tasks :</b> <code>{DT}</code> per day
-<b> Last Bot Used :</b> <code>{LAST_USED}</code>
-<b> MediaInfo Mode :</b> <code>{MEDIAINFO}</code>
-<b> Save Mode :</b> <code>{SAVE_MODE}</code>
-<b> User Bot PM :</b> <code>{BOT_PM}</code>'''
+<b>~ ʏᴛ-ᴅʟᴘ ᴏᴘᴛɪᴏɴs :</b> <b><code>{YT}</code></b>
+<b>~ ᴅᴀɪʟʏ ᴛᴀsᴋs :</b> <code>{DT}</code> per day
+<b>~ ʟᴀsᴛ ʙᴏᴛ ᴜsᴇᴅ :</b> <code>{LAST_USED}</code>
+<b>~ ᴍᴇᴅɪᴀ ɪɴғᴏ ᴍᴏᴅᴇ :</b> <code>{MEDIAINFO}</code>
+<b>~ sᴀᴠᴇ ᴍᴏᴅᴇ :</b> <code>{SAVE_MODE}</code>
+<b>~ ᴜsᴇʀ ʙᴏᴛ ᴘᴍ :</b> <code>{BOT_PM}</code>
 
-    MIRROR = ''' <b><u>Mirror/Clone Settings : {NAME}</u></b>
+<b>~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href='https://t.me/Hari_OP'>ʜᴀʀɪ ᠰ ᴛɢ​</a></b>'''
 
-<b> RClone Config :</b> <i>{RCLONE}</i>
-<b> Mirror Prefix :</b> <code>{MPREFIX}</code>
-<b> Mirror Suffix :</b> <code>{MSUFFIX}</code>
-<b> Mirror Remname :</b> <code>{MREMNAME}</code>
-<b> DDL Server(s) :</b> <i>{DDL_SERVER}</i>
-<b> User TD Mode :</b> <i>{TMODE}</i>
-<b> Total User TD(s) :</b> <i>{USERTD}</i>
-<b> Daily Mirror :</b> <code>{DM}</code> per day'''
+    MIRROR = '''🖌️ <b><u>ᴍɪʀʀᴏʀ-ᴄʟᴏɴᴇ sᴇᴛᴛɪɴɢs : {NAME}</u></b>
 
-    LEECH = ''' <b><u>Leech Settings for {NAME}</u></b>
+<b>~ ʀᴄʟᴏɴᴇ ᴄᴏɴғɪɢ :</b> <i>{RCLONE}</i>
+<b>~ ᴍɪʀʀᴏʀ ᴘʀᴇғɪx :</b> <code>{MPREFIX}</code>
+<b>~ ᴍɪʀʀᴏʀ sᴜғғɪx :</b> <code>{MSUFFIX}</code>
+<b>~ ᴍɪʀʀᴏʀ ʀᴇᴍɴᴀᴍᴇ :</b> <code>{MREMNAME}</code>
+<b>~ ᴅᴅʟ sᴇʀᴠᴇʀ(s):</b> <i>{DDL_SERVER}</i>
+<b>~ ᴜsᴇʀ ᴛᴅ ᴍᴏᴅᴇ :</b> <i>{TMODE}</i>
+<b>~ ᴛᴏᴛᴀʟ ᴜsᴇʀ ᴛᴅ(s) :</b> <i>{USERTD}</i>
+<b>~ ᴅᴀɪʟʏ ᴍɪʀʀᴏʀ :</b> <code>{DM}</code> per day
 
-<b> Daily Leech : </b><code>{DL}</code> per day
-<b> Leech Type :</b> <i>{LTYPE}</i>
-<b> Custom Thumbnail :</b> <i>{THUMB}</i>
-<b> Leech Split Size :</b> <code>{SPLIT_SIZE}</code>
-<b> Equal Splits :</b> <i>{EQUAL_SPLIT}</i>
-<b> Media Group :</b> <i>{MEDIA_GROUP}</i>
-<b> Leech Caption :</b> <code>{LCAPTION}</code>
-<b> Leech Prefix :</b> <code>{LPREFIX}</code>
-<b> Leech Suffix :</b> <code>{LSUFFIX}</code>
-<b> Leech Dumps :</b> <code>{LDUMP}</code>
-<b> Leech Remname :</b> <code>{LREMNAME}</code>'''
+<b>~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href='https://t.me/Hari_OP'>ʜᴀʀɪ ᠰ ᴛɢ​</a></b>'''
+    
+    LEECH = '''🥀 <b><u>ʟᴇᴇᴄʜ sᴇᴛᴛɪɴɢs ғᴏʀ - {NAME}</u></b>
+
+<b>~ ᴅᴀɪʟʏ ʟᴇᴇᴄʜ : </b><code>{DL}</code> per day
+<b>~ ʟᴇᴇᴄʜ ᴛʏᴘᴇ :</b> <i>{LTYPE}</i>
+<b>~ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ :</b> <i>{THUMB}</i>
+<b>~ ʟᴇᴇᴄʜ sᴘʟɪᴛ sɪᴢᴇ :</b> <code>{SPLIT_SIZE}</code>
+<b>~ ᴇǫᴜᴀʟ sᴘʟɪᴛs :</b> <i>{EQUAL_SPLIT}</i>
+<b>~ ᴍᴇᴅɪᴀ ɢʀᴏᴜᴘ :</b> <i>{MEDIA_GROUP}</i>
+<b>~ ʟᴇᴇᴄʜ ᴄᴀᴘᴛɪᴏɴ :</b> <code>{LCAPTION}</code>
+<b>~ ʟᴇᴇᴄʜ ᴘʀᴇғɪx :</b> <code>{LPREFIX}</code>
+<b>~ ʟᴇᴇᴄʜ sᴜғғɪx :</b> <code>{LSUFFIX}</code>
+<b>~ Leech ᴅᴜᴍᴘs :</b> <code>{LDUMP}</code>
+<b>~ ʟᴇᴇᴄʜ ʀᴇᴍᴀɴᴍᴇ :</b> <code>{LREMNAME}</code>
+
+<b>~ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ ›› <a href='https://t.me/Hari_OP'>ʜᴀʀɪ ᠰ ᴛɢ​</a></b>'''
