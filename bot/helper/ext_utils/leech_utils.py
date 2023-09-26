@@ -6,7 +6,7 @@ from aiofiles.os import remove as aioremove, path as aiopath, mkdir, makedirs
 from time import strftime, gmtime, time
 from re import search as re_search
 from aioshutil import rmtree as aiormtree
-from asyncio import create_subprocess_exec
+from asyncio import create_subprocess_exec, create_task, gather
 from asyncio.subprocess import PIPE
 
 from bot import bot_cache, LOGGER, MAX_SPLIT_SIZE, config_dict, user_data
