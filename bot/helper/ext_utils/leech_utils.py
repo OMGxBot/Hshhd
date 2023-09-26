@@ -2,9 +2,10 @@ import hashlib
 from re import sub as re_sub
 from shlex import split as ssplit
 from os import path as ospath
-from aiofiles.os import remove as aioremove, path as aiopath, mkdir
-from time import time
+from aiofiles.os import remove as aioremove, path as aiopath, mkdir, makedirs
+from time import strftime, gmtime, time
 from re import search as re_search
+from aioshutil import rmtree as aiormtree
 from asyncio import create_subprocess_exec
 from asyncio.subprocess import PIPE
 
@@ -88,7 +89,7 @@ async def get_document_type(path):
     return is_video, is_audio, is_image
 
 
-async def take_ss(video_file, duration):
+"""async def take_ss(video_file, duration):
     des_dir = 'Thumbnails'
     if not await aiopath.exists(des_dir):
         await mkdir(des_dir)
@@ -106,7 +107,33 @@ async def take_ss(video_file, duration):
         LOGGER.error(
             f'Error while extracting thumbnail. Name: {video_file} stderr: {err}')
         return None
-    return des_dir
+    return des_dir"""
+
+
+async def take_ss(video_file, duration=None, total=1, gen_ss=False):
+    des_dir = ospath.join('Thumbnails', f"{time()}")
+    await makedirs(des_dir, exist_ok=True)
+    if duration is None:
+        duration = (await get_media_info(video_file))[0]
+    if duration == 0:
+        duration = 3
+    duration = duration - (duration * 2 / 100)
+    cmd = ["render", "-hide_banner", "-loglevel", "error", "-ss", "", "-i", video_file, "-vf", "thumbnail", "-frames:v", "1", des_dir]
+    tasks = []
+    tstamps = {}
+    for eq_thumb in range(1, total+1):
+        cmd[5] = str((duration // total) * eq_thumb)
+        tstamps[f"aeon_{eq_thumb}.jpg"] = strftime("%H:%M:%S", gmtime(float(cmd[5])))
+        cmd[-1] = ospath.join(des_dir, f"aeon_{eq_thumb}.jpg")
+        tasks.append(create_task(create_subprocess_exec(*cmd, stderr=PIPE)))
+    status = await gather(*tasks)
+    for task, eq_thumb in zip(status, range(1, total+1)):
+        if await task.wait() != 0 or not await aiopath.exists(ospath.join(des_dir, f"aeon_{eq_thumb}.jpg")):
+            err = (await task.stderr.read()).decode().strip()
+            LOGGER.error(f'Error while extracting thumbnail no. {eq_thumb} from video. Name: {video_file} stderr: {err}')
+            await aiormtree(des_dir)
+            return None
+    return (des_dir, tstamps) if gen_ss else ospath.join(des_dir, "aeon_1.jpg")
 
 
 async def split_file(path, size, file_, dirpath, split_size, listener, start_time=0, i=1, inLoop=False, multi_streams=True):
