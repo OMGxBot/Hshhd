@@ -8,6 +8,7 @@ asyncio
 beautifulsoup4
 bencoding
 cloudscraper
+cinemagoer
 dnspython
 feedparser
 flask
